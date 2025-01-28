@@ -1,0 +1,63 @@
+.outputPanel {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .outputContent {
+        flex: 1;
+        height: 100%;
+        
+        .outputItem {
+            height: 100%;
+            
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        }
+    }
+
+    .tabBar {
+        display: flex;
+        border-bottom: 1px solid #ddd;
+        
+        .tab {
+            padding: 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            
+            &.active {
+                border-bottom: 2px solid $primary-color;
+            }
+            
+            .closeTab {
+                border: none;
+                background: none;
+                cursor: pointer;
+                font-size: 18px;
+                
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .outputContent {
+        flex: 1;
+        padding: 16px;
+        overflow: auto;
+        
+        .outputItem {
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin-bottom: 16px;
+            padding: 8px;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+    }
+}
